@@ -22,5 +22,6 @@ public class TableController implements Initializable {
         firstRow.add("A");
         firstRow.add("B");
         manager.addRow(firstRow);
+        // TODO - add columns, cells
     }
 }
