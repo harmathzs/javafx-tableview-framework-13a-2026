@@ -53,7 +53,8 @@ public class TableviewManager implements ITableviewManager {
 
     @Override
     public void setCellValue(int rowIndex, int columnIndex, String value) {
-
+        ObservableList<String> row = tableData.get(rowIndex);
+        row.set(columnIndex, value);
     }
 
 
