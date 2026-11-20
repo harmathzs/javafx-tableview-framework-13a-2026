@@ -21,6 +21,9 @@ public class TableviewManager implements ITableviewManager {
         return tableData;
     }
 
+    /**
+     * Constructor.
+     * */
     public TableviewManager() {
         tableView = new TableView<>();
         initTableData();
@@ -36,6 +39,11 @@ public class TableviewManager implements ITableviewManager {
         return tableView;
     }
 
+    /**
+     * Setter for tableView.
+     *
+     * @param tableview TableView.
+     * */
     @Override
     public void setTableview(TableView<ObservableList<String>> tableview) {
         this.tableView = tableview;
