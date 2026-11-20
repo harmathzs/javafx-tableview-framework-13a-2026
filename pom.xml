@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.javafxtableviewframework13a2026/com.example.javafxtableviewframework13a2026.HelloApplication
+                                com.example.javafxtableviewframework13a2026/com.example.javafxtableviewframework13a2026.TableApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
