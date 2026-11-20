@@ -56,10 +56,23 @@ public class TableviewManager implements ITableviewManager {
 
     }
 
-    @Override
+
     public void addRow(List<String> rowData) {
         if (tableData!=null && rowData!=null && !rowData.isEmpty()) {
             tableData.add(FXCollections.observableArrayList(rowData));
+            if (tableView!=null) {
+                for (int i=0; i < rowData.size(); i++) {
+                    setCellValue(tableData.size()-1, i, rowData.get(i));
+                }
+
+                tableView.setItems(tableData);
+            }
+        }
+    }
+
+    public void addRow() {
+        if (tableData!=null) {
+            tableData.add(FXCollections.observableArrayList());
             if (tableView!=null) {
                 tableView.setItems(tableData);
             }
