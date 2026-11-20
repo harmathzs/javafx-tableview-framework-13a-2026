@@ -1,14 +1,12 @@
 package com.example.javafxtableviewframework13a2026;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 
 public class TableController {
     @FXML
-    private Label welcomeText;
+    public TableView<ObservableList<String>> tableView;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+
 }
