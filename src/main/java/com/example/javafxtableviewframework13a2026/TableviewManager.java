@@ -11,6 +11,11 @@ public class TableviewManager implements ITableviewManager {
     private TableView<ObservableList<String>> tableView;
     private ObservableList<ObservableList<String>> tableData;
 
+    /**
+     * Initialize table data.
+     *
+     * @return tableData
+     * */
     public ObservableList<ObservableList<String>> initTableData() {
         tableData = FXCollections.observableArrayList();
         return tableData;
