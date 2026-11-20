@@ -7,24 +7,35 @@ import java.util.List;
 import java.util.function.Function;
 
 public class TableviewManager implements ITableviewManager {
+    private TableView<ObservableList<String>> tableView;
+    private ObservableList<ObservableList<String>> tableData;
+
+    public TableviewManager() {
+        tableView = new TableView<>();
+    }
+
+    public TableviewManager(TableView<ObservableList<String>> tableView) {
+        setTableview(tableView);
+    }
+
     @Override
     public TableView<ObservableList<String>> getTableview() {
-        return null;
+        return tableView;
     }
 
     @Override
     public void setTableview(TableView<ObservableList<String>> tableview) {
-
+        this.tableView = tableview;
     }
 
     @Override
     public ObservableList<ObservableList<String>> getTableData() {
-        return null;
+        return tableData;
     }
 
     @Override
     public void setTableData(ObservableList<ObservableList<String>> tableData) {
-
+        this.tableData = tableData;
     }
 
     @Override
