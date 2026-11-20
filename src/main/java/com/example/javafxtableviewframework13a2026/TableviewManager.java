@@ -1,5 +1,6 @@
 package com.example.javafxtableviewframework13a2026;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
 
@@ -10,12 +11,19 @@ public class TableviewManager implements ITableviewManager {
     private TableView<ObservableList<String>> tableView;
     private ObservableList<ObservableList<String>> tableData;
 
+    public ObservableList<ObservableList<String>> initTableData() {
+        tableData = FXCollections.observableArrayList();
+        return tableData;
+    }
+
     public TableviewManager() {
         tableView = new TableView<>();
+        initTableData();
     }
 
     public TableviewManager(TableView<ObservableList<String>> tableView) {
         setTableview(tableView);
+        initTableData();
     }
 
     @Override
@@ -50,7 +58,12 @@ public class TableviewManager implements ITableviewManager {
 
     @Override
     public void addRow(List<String> rowData) {
-
+        if (tableData!=null && rowData!=null && !rowData.isEmpty()) {
+            tableData.add(FXCollections.observableArrayList(rowData));
+            if (tableView!=null) {
+                tableView.setItems(tableData);
+            }
+        }
     }
 
     @Override
